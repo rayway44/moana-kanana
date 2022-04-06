@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Glegoo:wght@700&display=swap');
+
+.section-two-holder{
+    margin: 0 auto;
+    width: 1920px;
+    min-height: 865px;
+    background-image: url(../../../public/Images/PacificPattern01.png);
+    background-color: rgb(88,175,190);
+    border:2px solid red;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-two-title{
+    font-family: 'Glegoo', serif;
+    font-size: 80px;
+    font-weight: bold;
+    border:3px solid rgba(255, 255, 255, 1);
+    border-radius: 13px;
+    width:500px;
+    text-align: center;
+    margin-top:245px;
+}
+
+.section-two-content{
+    font-size: 28px;
+    width: 1321px;
+    padding-top: 20px;
+    color:rgba(255, 255, 255, 1);
+    text-align: center;
+}

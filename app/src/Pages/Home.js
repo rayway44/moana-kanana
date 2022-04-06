@@ -3,6 +3,7 @@ import '../App.css'
 import Header from '../Components/Header'
 import Nav from '../Components/NavBar'
 import SectionOne from '../Components/SectionOne'
+import SectionTwo from '../Components/SectionTwo'
 
 export default function Home() {
 
@@ -11,6 +12,7 @@ export default function Home() {
       <Header />
       <Nav />
       <SectionOne />
+      <SectionTwo />
         Home project
         
     </div>
