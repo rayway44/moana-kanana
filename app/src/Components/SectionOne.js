@@ -22,22 +22,22 @@ export default function SectionOne() {
 
             </div>
             <div className="section-one-right">
-                
-                <div className="section-one-right-icon01">
-                    <img src="Images/Icon01.png" alt=''/><br />
-                    ADULT<br />
-                    TRAINING
+                <div className="section-one-right-top">   
+                    <div className="section-one-right-icon01">
+                        <img src="Images/Icon01.png" alt=''/><br />
+                        ADULT<br />
+                        TRAINING
+                    </div>
+                    <div className="section-one-right-icon02">
+                        <img src="Images/Icon02.png" alt=''/><br />
+                        PROJECT <br />
+                        MANAGEMENT
+                    </div>
                 </div>
-                <div className="section-one-right-icon02">
-                    <img src="Images/Icon02.png" alt=''/><br />
-                    PROJECT <br />
-                    MANAGEMENT
+                <div className="section-one-right-bottom">
+                    <img src="Images/BgPacificPattern02.png" alt="" />
                 </div>
-                
             </div>
-        </div>
-        <div className="section-one-holder-bottom">
-            <img src='Images/BgPacificPattern02.png' alt='' className="home-img"/>
         </div>
     </div>
   )

@@ -1,0 +1,83 @@
+.main-sectionp2-holder{
+    height: 100vh;
+    width: 100vw;
+    background-image: url('Banner.png');
+    background-repeat:no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.main-section-span{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;    
+
+    
+
+    
+    height: 70vh;
+
+}
+
+#skills-text{
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 75px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+#improve-text{
+    
+    font-size: 36px;
+    font-weight: 400;
+    line-height: 54px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #FFFFFF;
+
+}
+
+.about-sectionp2-holder{
+    height: 100vh;
+    width: 100vw;
+    background-color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 80px;
+    padding-left: 200px;
+}
+
+#about-sectionp2-title{
+    font-size: 40px;
+    font-weight: 500 medium;
+
+    padding: 15px;
+}
+
+#about-img{
+    padding: 15px;
+}
+
+#about-text{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    text-align: justify;
+    padding: 15px;
+
+    width: 80vw;
+}
+
+.break-text{
+    margin-bottom: 20px;
+}

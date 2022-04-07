@@ -1,6 +1,9 @@
 import React from 'react'
 import './css/NavBar.css'
 
+import { Link } from 'react-router-dom'
+import About from '../Pages/About'
+
 export default function NavBar() {
   return (
     <div className="nav-holder">
@@ -15,8 +18,10 @@ export default function NavBar() {
         </div>
 
         <div className="nav-right">
-          <div className="nav-icon"><a href=' '>Home - Changed ray</a></div>
+          <div className="nav-icon"><a href=' '>Home</a></div>
+          <Link to='/about'>
           <div className="nav-icon"><a href=' '>About</a></div>
+          </Link>
           <div className="nav-icon"><a href=' '>Services</a></div>
           <div><a href=' '>Contact</a></div>
         </div>

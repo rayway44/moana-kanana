@@ -1,13 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Glegoo:wght@700&display=swap');
 
-
-.home-img{
-    border:2px solid red;
-    margin: 0px 0px 0px 0px;
-}
-
 .section-one{
-    border:2px solid black;
+    /* border:2px solid black; */
     margin: 0 auto;
     width: 1920px;
     background-repeat: no-repeat;
@@ -17,13 +11,12 @@
 }
 
 .section-one-holder-top{
-    border:2px solid red;
+    /* border:12px solid red; */
     display: flex;
+    /* height: 100%; */
+    background-size: cover;
+    background-repeat:no-repeat;
     justify-content: space-between;
-}
-
-.section-one-holder-bottom{
-    /* border:12px solid green; */
 }
 
 .section-one-left{
@@ -47,12 +40,26 @@
 
 .section-one-right{
     width:50%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    margin-top:400px;
+}
+
+.section-one-right-top{
     color:white;
     font-size: 36px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: bold;
+    /* border:12px solid red; */
+}
+
+/* Move the Icon with below */
+.section-one-right-bottom{
+    margin-top:140px;
+    margin-left:260px;
 }
 
 .section-one-right-icon01{
