@@ -4,12 +4,12 @@ import Header from '../Components/Header'
 import Nav from '../Components/NavBar'
 import SectionOne from '../Components/SectionOne'
 import SectionTwo from '../Components/SectionTwo'
-import SectionThree from '../Components/SectionThree'
+import '../Components/css/Home.css'
 
 export default function Home() {
 
   return (
-    <div className="page-holder">
+    <div className="home-holder">
       <Header />
       <Nav />
       <SectionOne />

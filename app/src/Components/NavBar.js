@@ -6,19 +6,19 @@ export default function NavBar() {
     <div className="nav-holder">
       <div className="nav">
 
-        <div className="nav-left">
-          <img src='Images/Rectangle-4.png' alt='' />
+        <div>
+        <a href=' 'className="nav-left"><img src='Images/Rectangle-4.png' alt='' />
           <div>
             <span className="left-title">KANANA</span><br />
             Building Better Futures
-          </div>
+          </div></a>
         </div>
 
         <div className="nav-right">
-          <div className="nav-icon">Home</div>
-          <div className="nav-icon">About</div>
-          <div className="nav-icon">Services</div>
-          <div className="nav-icon">Contact</div>
+          <div className="nav-icon"><a href=' '>Home</a></div>
+          <div className="nav-icon"><a href=' '>About</a></div>
+          <div className="nav-icon"><a href=' '>Services</a></div>
+          <div><a href=' '>Contact</a></div>
         </div>
       
       </div>

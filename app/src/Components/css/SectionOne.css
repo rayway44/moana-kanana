@@ -1,13 +1,29 @@
 @import url('https://fonts.googleapis.com/css2?family=Glegoo:wght@700&display=swap');
 
+
+.home-img{
+    border:2px solid red;
+    margin: 0px 0px 0px 0px;
+}
+
 .section-one{
-    /* border:2px solid black; */
+    border:2px solid black;
     margin: 0 auto;
     width: 1920px;
+    background-repeat: no-repeat;
+    background-size:cover;
     background-image: url(../../../public/Images/SectionOneBg.png);
     height: 1051px;
+}
+
+.section-one-holder-top{
+    border:2px solid red;
     display: flex;
     justify-content: space-between;
+}
+
+.section-one-holder-bottom{
+    /* border:12px solid green; */
 }
 
 .section-one-left{

@@ -7,10 +7,10 @@ export default function Header() {
         <div className='header'>
             
             <div className='icon-one-left'>
-                <img src='Images/Vector.png' alt="" />info@kanana.co.nz
+                <img src='Images/Vector.png' alt="" /><a href=' '>info@kanana.co.nz</a>
             </div>
             <div className='icon-two-right'>
-                <img src='Images/vector02.png' alt="" />021 572 353
+                <img src='Images/vector02.png' alt="" /><a href=' '>021 572 353</a>
             </div>
 
         </div>
