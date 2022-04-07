@@ -8,6 +8,7 @@
     font-size: 20px;
     display:flex;
     justify-content: flex-end;
+    /* border: 2px solid red; */
 }
 
 .icon-one-left{
@@ -27,4 +28,15 @@
 }
 .icon-two-right img{
     padding: 0px 20px 0px 0px;
+}
+
+@media screen and (max-width: 1200px) {
+    .header{
+        /* border: 8px solid yellow; */
+        margin: 0 auto;
+        width: auto;
+        font-size: 20px;
+        display: flex;
+        justify-content:center;
+    }
 }

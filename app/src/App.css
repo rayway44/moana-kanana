@@ -1,4 +1,21 @@
-.App{
-    box-sizing: border-box;
-    overflow: hidden;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+.App {
+  /* max-width: 1920px; */
+  /* border: 1px solid red; */
+  font-family: 'Poppins', sans-serif;
+}
+
+.page-holder{
+  border: 2px solid green;
+  margin: 0 auto;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
 }

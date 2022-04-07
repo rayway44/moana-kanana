@@ -36,3 +36,46 @@
 .nav-icon{
     padding-right:120px
 }
+
+@media screen and (max-width: 1200px) {
+    .nav{
+        /* border: 8px solid yellow; */
+        margin: 0 auto;
+        width: auto;
+        font-size: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .nav-left{
+        font-size:20px;
+        display: flex;
+        justify-content:center;
+        align-items:center;
+    }
+    
+    .left-title{
+        font-family: 'Montserrat Subrayada', sans-serif;
+        font-size: 45px;
+    }
+    
+    .nav-left img{
+        padding-right:30px
+    }
+    
+    .nav-right{
+        display: flex;
+        flex-direction: column;
+        font-size:26px;
+        /* border: 12px solid green; */
+        /* text-align: center; */
+    }
+    
+    .nav-icon{
+        /* border: 2px solid red; */
+        padding:10px;
+        text-align: center;
+        /* display: flex;
+        justify-content:center; */
+    }
+}

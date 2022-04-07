@@ -7,18 +7,33 @@ export default function SectionOne() {
 
         <div className="section-one-left">
             <div className="section-one-left-top-title">Empowering<br />
-            People with<br />
-            essential<br />
-            life skills</div><br />
+                People with<br />
+                essential<br />
+                life skills
+            </div>
+            
+            <br />
 
-            <div className="section-one-left-bottom-title">Improve well-being,<br />
-            job prospects and<br />
-            quality of life</div>
+            <div className="section-one-left-bottom-title">
+                Improve well-being,<br />
+                job prospects and<br />
+                quality of life
+            </div>
 
         </div>
         <div className="section-one-right">
             
-            SECTION ONE - RIGHT section
+            <div className="section-one-right-icon01">
+                <img src="Images/Icon01.png" alt=''/><br />
+                ADULT<br />
+                TRAINING
+            </div>
+            <div className="section-one-right-icon02">
+                <img src="Images/Icon02.png" alt=''/><br />
+                PROJECT <br />
+                MANAGEMENT
+            </div>
+            
         </div>
     </div>
   )
