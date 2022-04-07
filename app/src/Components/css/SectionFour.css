@@ -3,6 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
 
 .section-four {
+  border: 12px solid red;
   background-color: white;
   width: 100%;
   height: 100vh;
@@ -62,17 +63,12 @@
 
 .section-four {
   background-color: white;
-  width: 100%;
-  height: 100vh;
-  background-image: url(../../../public/Images/people1.png);
-  background-repeat: no-repeat;
-  background-size: 100vw 80vh;
-  background-position: bottom;
+  width: 1920px;
+  margin: 0 auto;
   padding-top:10vh;
 }
 
 .section-four h1 {
-  position: relative;
   font-family: Poppins;
   font-size: 2.2vw;
   margin-top: 8vh;
@@ -82,22 +78,29 @@
 }
 
 .section-four-icons-container {
+  /* border: 12px solid green; */
+  /* border: 12px solid red; */
   display: flex;
   flex-direction: row;
   justify-content: center;
   text-justify: center;
-  width: 100%;
+  text-align: center;
 }
 
 .section-four-icons-container span {
-  position: relative;
+  /* border: 12px solid green; */
   text-justify: center;
   margin-top: 5vh;
-  font-size: 1.3vw;
+  font-size: 20px;
 }
 
 .section-four-icon {
   width: 5vw;
+}
+
+.section-four-bottom{
+  /* border: 12px solid green; */
+  width:100%;
 }
 
 .section-four-icon-column {

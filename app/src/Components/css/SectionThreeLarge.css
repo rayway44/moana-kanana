@@ -413,7 +413,7 @@ justify-content: center;
       margin: 0 auto;
       /* height: 120vh; */
       background-repeat: no-repeat;
-      background-size: 100vw 120vh;
+      /* background-size: 100vw 120vh; */
       background-image: url(../../../public/Images/yellow.png);
       color: white;
       display: flex;
