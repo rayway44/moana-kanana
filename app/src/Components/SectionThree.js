@@ -1,14 +1,3 @@
-<<<<<<< HEAD
-import React from 'react'
-import './css/SectionThree.css'
-
-export default function SectionThree() {
-  return (
-    <div className="section-three-holder">
-        SectionThree
-    </div>
-  )
-=======
 import "./css/SectionThreeLarge.css";
 
 export default function CommunityProjects() {
@@ -92,5 +81,4 @@ export default function CommunityProjects() {
       </div>
     </>
   );
->>>>>>> Neish
 }

@@ -4,13 +4,9 @@ import Header from '../Components/Header'
 import Nav from '../Components/NavBar'
 import SectionOne from '../Components/SectionOne'
 import SectionTwo from '../Components/SectionTwo'
-<<<<<<< HEAD
-import SectionThree from '../Components/SectionThree'
-=======
 import SectionThree from '../Components/SectionThree';
 import SectionFour from '../Components/SectionFour';
 import Testimonials from '../Components/Testimonials'
->>>>>>> Neish
 
 export default function Home() {
 
