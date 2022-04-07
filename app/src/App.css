@@ -2,13 +2,13 @@
 
 .App {
   /* max-width: 1920px; */
-  border: 1px solid red;
+  /* border: 1px solid red; */
   font-family: 'Poppins', sans-serif;
 }
 
 .page-holder{
   border: 2px solid green;
-
+  margin: 0 auto;
 }
 
 @keyframes App-logo-spin {

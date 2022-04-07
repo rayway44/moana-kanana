@@ -5,8 +5,6 @@ export default function SectionTwo() {
   return (
     <div className='section-two-holder'>
 
-    
-        
         <div className='section-two-title'>
             WHO WE ARE
         </div>

@@ -18,7 +18,7 @@ export default function NavBar() {
           <div className="nav-icon">Home</div>
           <div className="nav-icon">About</div>
           <div className="nav-icon">Services</div>
-          <div>Contact</div>
+          <div className="nav-icon">Contact</div>
         </div>
       
       </div>

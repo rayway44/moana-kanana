@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Glegoo:wght@700&display=swap');
 
 .section-one{
-    /* border:2px solid black; */
+    border:2px solid black;
     margin: 0 auto;
     width: 1920px;
     background-image: url(../../../public/Images/SectionOneBg.png);
@@ -12,7 +12,6 @@
 
 .section-one-left{
     width: 40%;
-    border:2px solid red;
     color:white;
     display: flex;
     flex-direction: column;
@@ -28,11 +27,9 @@
 
 .section-one-left-bottom-title{
     font-size: 36px;
-    border:2px solid red;
 }
 
 .section-one-right{
-    border:2px solid black;
     width:50%;
     color:white;
     font-size: 36px;
@@ -43,12 +40,17 @@
 }
 
 .section-one-right-icon01{
-    /* border:2px solid red; */
     text-align: center;
     padding-right: 120px;
 }
 
 .section-one-right-icon02{
-    /* border:2px solid red; */
     text-align: center;
+}
+
+@media screen and (max-width: 400px) {
+    .section-one{
+        border:12px solid black;
+        background-image: none;
+    }
 }
