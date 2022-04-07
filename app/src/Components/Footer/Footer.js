@@ -1,7 +1,7 @@
 
 import './Footer.css';
 
-function App() {
+function Footer() {
     return (
         <div className="App">
             <div className="footer-body-container">
