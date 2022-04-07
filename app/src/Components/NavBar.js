@@ -15,7 +15,7 @@ export default function NavBar() {
         </div>
 
         <div className="nav-right">
-          <div className="nav-icon"><a href=' '>Home</a></div>
+          <div className="nav-icon"><a href=' '>Home - Changed ray</a></div>
           <div className="nav-icon"><a href=' '>About</a></div>
           <div className="nav-icon"><a href=' '>Services</a></div>
           <div><a href=' '>Contact</a></div>
