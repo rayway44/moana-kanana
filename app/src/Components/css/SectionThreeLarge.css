@@ -408,7 +408,9 @@ justify-content: center;
     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
     
     .section-three {
-      width: 100vw;
+      /* border: 12px solid red; */
+      width: 1920px;
+      margin: 0 auto;
       height: 120vh;
       background-repeat: no-repeat;
       background-size: 100vw 120vh;

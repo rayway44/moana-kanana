@@ -1,15 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Glegoo:wght@700&display=swap');
 
-.section-two-holder{
+.section-two-main{
     margin: 0 auto;
     width: 1920px;
     min-height: 865px;
-    width: 1920px;
     background-image: url(../../../public/Images/PacificPattern01.png);
     background-repeat: no-repeat;
     background-size: 1920px 865px;
     background-color: rgb(88,175,190);
-    border:2px solid red;
+    /* border:2px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.section-two-holder{
     color:white;
     display: flex;
     flex-direction: column;
@@ -62,6 +67,32 @@
     color:rgba(255, 255, 255, 1);
     text-align: center;
 }
+
+.section-two-bottom-img-holder{
+    display:flex;
+    /* border:13px solid red; */
+    justify-content: space-between;
+    margin-bottom: -310px;
+}
+
+.section-two-bottom-img-one{
+    /* border:13px solid white; */
+}
+
+.section-two-bottom-img-one img{
+    /* border:13px solid red; */
+    margin:60px 0px 0px 100px;
+}
+.section-two-bottom-img-two img{
+    /* border:13px solid red; */
+    margin: -80px 100px 0px 0px;
+}
+
+.section-two-bottom-img-two{
+    /* border:13px solid white; */
+}
+
+/* ===== MEDIA QUERIES ======== */
 
 @media screen and (max-width: 1200px) {
     .section-two-holder{
