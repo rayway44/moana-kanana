@@ -1,0 +1,8 @@
+
+.section-three-holder{
+    margin: 0 auto;
+    width:1920px;
+    border: 2px solid red;
+    min-height: 1332px;
+    background-image: url(../../../public/Images/PacificPattern02.png);
+}
