@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Subrayada:wght@700&display=swap');
 
 .nav{
-    width: 1550px;
+    width: 1550px;  
     margin: 0 auto;
     font-size: 20px;
     display: flex;
@@ -15,7 +15,7 @@
 }
 
 .nav a:hover{
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid red;
 }
 
 .nav-left{
