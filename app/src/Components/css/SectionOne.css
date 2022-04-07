@@ -3,10 +3,12 @@
 .section-one{
     /* border:2px solid black; */
     margin: 0 auto;
-    width: 1920px;
+    width: 100%;
     background-image: url(../../../public/Images/SectionOneBg.png);
     height: 1051px;
     display: flex;
+    background-size: cover;
+    background-repeat:no-repeat;
     justify-content: space-between;
 }
 
