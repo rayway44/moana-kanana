@@ -3,15 +3,15 @@ import TNavBar from '../TNavbar/TNavBar';
 import '../MainSection/MainSectionP2.css';
 import Profile from '../MainSection/MainSectionP2';
 import ContentEditable from 'react-contenteditable';
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import axios from 'axios';
 
 
 
 function CMSDashboard() {
 
-  const [text, SetText] = useState([]);
-  const [newtext, SetNewText] = useState([]);
+  const [text, SetText] = useState("");
+  const [newtext, SetNewText] = useState("");
 
   useEffect(() => {
     axios.get('http://localhost:8081/getText')
@@ -21,7 +21,7 @@ function CMSDashboard() {
       })
   }, []);
 
-  const onSubmit = () => {
+  const handleBlur = () => {
     axios.post("http://localhost:8081/updateAboutUsText", {
       text: newtext,
     })
@@ -34,8 +34,7 @@ function CMSDashboard() {
       });
   };
 
-  const test = text;
-  console.log(text)
+
   return (
     <div>
       <div className='main-sectionp2-container'>
@@ -49,7 +48,6 @@ function CMSDashboard() {
             <div id='improve-text'>
               Improve well-being, job prospects and quality of life
             </div>
-
           </div>
         </div>
         <div className='about-sectionp2-holder'>
@@ -58,13 +56,11 @@ function CMSDashboard() {
           </div>
           <div id='about-text'>
             <ContentEditable
-              html={test}
-            // onChange={(e) => SetNewText(e.target.value)}
-            // onBlur={onSubmit}
+              html={text}
+              onBlur={(e) => SetNewText(e.target.value)} 
             />
           </div>
         </div>
-
       </div>
     </div>
   )
