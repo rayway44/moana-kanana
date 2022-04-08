@@ -1,6 +1,7 @@
    
 import React from 'react'
 import Logo from './Logo.png'
+import { Link } from 'react-router-dom'
 import './TNavBar.css'
 
 export default function TNavBar() {
@@ -17,7 +18,7 @@ export default function TNavBar() {
         </div>
 
         <div className="tnav-right">
-          <div className="tnav-icon">Home</div>
+          <div className="tnav-icon"><Link to='/'>Home</Link></div>
           <div className="tnav-icon">About</div>
           <div className="tnav-icon">Services</div>
           <div>Contact</div>
