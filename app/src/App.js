@@ -19,6 +19,7 @@ function App() {
  const logOut = () => {
  setisLoggedIn(false);
  };
+
   return (
     <div className="App">
       <Router>
