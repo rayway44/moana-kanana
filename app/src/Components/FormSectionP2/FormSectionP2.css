@@ -1,0 +1,81 @@
+.form-container{
+    height: 695px;
+    width: 1920px;
+
+    background-color: #ECF8FF;
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+.form-holder{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.form-left{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    /* border: 2px solid red; */
+    height: 475px;
+    width: 756px;
+    left: 951px;
+    top: 2170px;
+
+    
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 33px;
+    letter-spacing: 0em;
+
+    margin-right: 20px;
+
+
+}
+
+#talanoa{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: 40px;
+    margin-bottom: 20px;
+    /* border: 2px solid green; */
+    width: 756px;
+    
+
+}
+
+#talanoa-text{
+    display: flex;
+    align-items: center;
+}
+.form-right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border: 2px solid red; */
+    height: 475px;
+    width: 756px;
+    /* left: 951px; */
+    /* top: 2170px; */
+    border-radius: 0px;
+
+}
+.form-right-content{
+ display: flex;
+ flex-direction: column;
+ 
+ /* border: 2px solid red; */
+ width: 100%;
+  
+  
+ 
+  
+}
+.form-right-input{
+    width: 100%
+}
