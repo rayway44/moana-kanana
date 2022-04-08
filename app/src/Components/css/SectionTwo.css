@@ -1,30 +1,62 @@
 @import url('https://fonts.googleapis.com/css2?family=Glegoo:wght@700&display=swap');
 
-.section-two-holder{
+.section-two-main{
     margin: 0 auto;
     width: 1920px;
     min-height: 865px;
-    width: 1920px;
     background-image: url(../../../public/Images/PacificPattern01.png);
     background-repeat: no-repeat;
-    background-size: 1920px 865px;
+
     background-color: rgb(88,175,190);
     /* border:2px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.section-two-holder{
     color:white;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+.section-two-top{
+    display:flex;
+    align-items:flex-end;
+    justify-content:space-between;
+
+    /* border:13px solid red; */
+    width:100%;
+}
+
+.section-two-one{
+    /* border:3px solid green; */
+    width:30%
+}
+
+.section-two-one img{
+    /* border:3px solid yellow; */
+    margin-top: 0px;
+}
+
 .section-two-title{
     font-family: 'Glegoo', serif;
-    font-size: 80px;
-    font-weight: bold;
+    font-size: 40px;
+    font-weight: 700;
     border:5px solid rgba(255, 255, 255, 1);
     border-radius: 13px;
-    /* width:auto; */
     text-align: center;
     margin-top:245px;
+    border:3px solid white;
+    padding:5px 80px 5px 80px;
+    display: flex;
+}
+
+.section-two-three{
+    display: flex;
+    /* border:3px solid green; */
+    width:30%
 }
 
 .section-two-content{
@@ -36,37 +68,125 @@
     text-align: center;
 }
 
-@media screen and (max-width: 1200px) {
-    .section-two-holder{
-        /* border:12px solid black; */
+.section-two-bottom-img-holder{
+    display:flex;
+    /* border:13px solid red; */
+    justify-content: space-between;
+    margin-bottom: -310px;
+}
+
+.section-two-bottom-img-one{
+    /* border:13px solid white; */
+}
+
+.section-two-bottom-img-one img{
+    /* border:13px solid red; */
+    margin:60px 0px 0px 100px;
+}
+.section-two-bottom-img-two img{
+    /* border:13px solid red; */
+    margin: -80px 100px 0px 0px;
+}
+
+.section-two-bottom-img-two{
+    /* border:13px solid white; */
+}
+
+/* ===== MEDIA QUERIES ======== */
+/* ===== MEDIA QUERIES ======== */
+/* ===== MEDIA QUERIES ======== */
+
+@media screen and (max-width: 1000px) {
+    .section-two-main{
         margin: 0 auto;
-        width: auto;
+        /* border-top: 11px solid green; */
+        width: 100%;
+        min-height: 865px;
         background-image: url(../../../public/Images/PacificPattern01.png);
-        background-position: 90% 0%;
-        height: 1051px;
+        background-repeat: no-repeat;
+        background-color: rgb(88,175,190);
+        /* border:2px solid red; */
         display: flex;
         flex-direction: column;
         align-items: center;
-        /* justify-content: center; */
     }
-
+    
+    .section-two-holder{
+        /* border-top: 11px solid red; */
+        width: 100%;
+        color:white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .section-two-top{
+        display:flex;
+        align-items:center;
+        justify-content: center;
+        /* border:13px solid black; */
+        /* width:100%; */
+    }
+    
+    .section-two-one{
+        /* border:3px solid green; */
+        /* display:none; */
+    }
+    
+    .section-two-one img{
+        /* border:3px solid yellow; */
+        margin-top: 0px;
+    }
+    
     .section-two-title{
         font-family: 'Glegoo', serif;
         font-size: 40px;
-        font-style: bold;
-        padding:10px 20px 10px 20px;
-        border:3px solid rgba(255, 255, 255, 1);
+        font-weight: 700;
+        border:5px solid rgba(255, 255, 255, 1);
         border-radius: 13px;
-        /* width:auto; */
         text-align: center;
+        margin-top:0px;
+        border:3px solid white;
+        padding:5px 80px 5px 80px;
+        display: flex;
+    }
+    
+    .section-two-three{
+        display: flex;
+        /* border:3px solid green; */
+        width:30%
     }
     
     .section-two-content{
         font-size: 28px;
-        width: auto;
+        width: 100%;
         font-weight: 700;
         padding-top: 40px;
         color:rgba(255, 255, 255, 1);
         text-align: center;
+    }
+    
+    .section-two-bottom-img-holder{
+        display:flex;
+        /* border:13px solid red; */
+        justify-content: space-between;
+        margin-bottom: -310px;
+    }
+    
+    .section-two-bottom-img-one{
+        /* border:13px solid white; */
+    }
+    
+    .section-two-bottom-img-one img{
+        /* border:13px solid red; */
+        margin:60px 0px 0px 100px;
+    }
+    .section-two-bottom-img-two img{
+        /* border:13px solid red; */
+        display:none;
+    }
+    
+    .section-two-bottom-img-two{
+        /* border:13px solid white; */
     }
 }

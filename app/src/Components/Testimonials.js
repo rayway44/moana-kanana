@@ -4,8 +4,10 @@ import Rating from "./icons/stars.png";
 export default function Testimonials() {
   return (
     <div className="testimonials-component">
-      <div className="testimonials-title">
-        <span>TESTIMONIALS</span>
+      <div className="testimonials-title-holder">
+        <div className="testimonials-title">
+        TESTIMONIALS
+        </div>
       </div>
       <div className="testimonials-wrapper">
         <div className="testimonials-div">

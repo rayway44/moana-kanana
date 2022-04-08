@@ -3,10 +3,17 @@
 .section-one{
     /* border:2px solid black; */
     margin: 0 auto;
-    width: 100%;
+    width: 1920px;
+    background-repeat: no-repeat;
+    background-size:cover;
     background-image: url(../../../public/Images/SectionOneBg.png);
     height: 1051px;
+}
+
+.section-one-holder-top{
+    /* border:12px solid red; */
     display: flex;
+    /* height: 100%; */
     background-size: cover;
     background-repeat:no-repeat;
     justify-content: space-between;
@@ -33,12 +40,26 @@
 
 .section-one-right{
     width:50%;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    margin-top:400px;
+}
+
+.section-one-right-top{
     color:white;
     font-size: 36px;
     display: flex;
     align-items: center;
     justify-content: center;
     font-weight: bold;
+    /* border:12px solid red; */
+}
+
+/* Move the Icon with below */
+.section-one-right-bottom{
+    margin-top:140px;
+    margin-left:260px;
 }
 
 .section-one-right-icon01{
@@ -50,33 +71,44 @@
     text-align: center;
 }
 
+/* ====== MEDIA QUERIES BELOW ======*/
+
 @media screen and (max-width: 1000px) {
     .section-one{
         /* border:12px solid black; */
         margin: 0 auto;
         width: auto;
+        background-repeat: no-repeat;
+        background-size:cover;
         background-image: url(../../../public/Images/SectionOneBg.png);
-        background-position: 90% 0%;
-        height: 1051px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        /* height: 1051px; */
     }
-
+    
+    .section-one-holder-top{
+        /* border:12px solid red; */
+        display: flex;
+        /* height: 100%; */
+        flex-direction: column;
+        /* background-size: cover; */
+        background-repeat:no-repeat;
+        justify-content: space-between;
+    }
+    
     .section-one-left{
         /* border:12px solid red; */
-        /* width: 40%; */
-        color:white;
+        width: 100%;
         text-align: center;
-        padding: 0px 0px 0px 0px;
+        color:white;
+        display: flex;
+        flex-direction: column;
+        padding: 100px 0px 0px 0px;
     }
     
     .section-one-left-top-title{
         font-family: 'Glegoo', serif;
-        font-size: 60px;
+        font-size: 80px;
         font-weight: bold;
-        line-height:70px;
+        line-height:90px;
     }
     
     .section-one-left-bottom-title{
@@ -84,20 +116,34 @@
     }
     
     .section-one-right{
-        /* border:12px solid yellow; */
-        margin: 50px 0px 0px 0px;
-        /* width:50%; */
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        justify-content:center;
+        align-items:center;
+        margin-top:20px;
+        /* border:12px solid red; */
+    }
+    
+    .section-one-right-top{
         color:white;
         font-size: 36px;
-        /* display: flex; */
-        /* align-items: center;
-        justify-content: center; */
+        /* width:100%; */
+        display: flex;
+        align-items: center;
+        justify-content: center;
         font-weight: bold;
+        /* border:12px solid red; */
+    }
+    
+    /* Move the Icon with below */
+    .section-one-right-bottom{
+        display:none
     }
     
     .section-one-right-icon01{
         text-align: center;
-        /* padding-right: 120px; */
+        padding-right: 120px;
     }
     
     .section-one-right-icon02{
