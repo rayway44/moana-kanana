@@ -12,7 +12,7 @@ import Footer from '../Components/Footer/Footer'
 export default function Home() {
 
   return (
-    <div className="page-holder">
+    <div className="home-holder">
       <Header />
       <Nav />
       <SectionOne />

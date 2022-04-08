@@ -41,6 +41,7 @@ export default function SectionFour() {
           <span>icon skill</span>
         </div>
       </div>
+      <img src='Images/people1.png' alt="icon" className='section-four-bottom' />
     </div>
   );
 }

@@ -8,7 +8,17 @@
     font-size: 20px;
     display:flex;
     justify-content: flex-end;
-    /* border: 2px solid red; */
+    margin-top: 10px;
+}
+
+.header a{
+    text-decoration: none;
+    color:black;
+    border-bottom: 2px solid rgb(255, 255, 255);
+}
+
+.header a:hover{
+    border-bottom: 2px solid black;
 }
 
 .icon-one-left{
