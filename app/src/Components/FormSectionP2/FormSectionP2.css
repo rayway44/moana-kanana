@@ -1,9 +1,10 @@
 .form-container{
+    border:12px solid yellow;
     height: 695px;
+    margin: 0 auto;
     width: 1920px;
 
     background-color: #ECF8FF;
-    /* border: 2px solid red; */
     display: flex;
     justify-content: center;
     align-content: center;
