@@ -1,9 +1,52 @@
+import axios from 'axios';
 import React from 'react'
 import { useState, useEffect } from 'react';
 import './css/Header.css'
 
 export default function Header() {
   const [showLogin, setShowLogin] = useState('noLogin')
+
+  const [username, setUsername] = useState('')
+  const [email, setEmail] = useState('')
+  const [password, setPassword] = useState('')
+
+
+
+
+
+  // const username = document.getElementById('login-username')
+  // const email = document.getElementById('login-email')
+  // const password = document.getElementById('login-password')
+
+  // const loginObject = {
+  //   username: username,
+  //   email: email,
+  //   password: password
+  // }
+  const checkCredentials = (e) => {
+    e.preventDefault()
+    axios.post(`http://localhost:8081/adminLogin`, {
+      // username: username,
+      email: email,
+      password: password
+    })
+      .then((res) => {
+        const response = res.data
+        if (response === true) {
+          window.location.href = "http://localhost:3000/dashboard";
+        } else {
+          alert('Incorrect credentials please try again.')
+        }
+
+
+      })
+      .catch((err) => {
+        console.log(err);
+        console.log('logins failed')
+      });
+
+  };
+
   const handleClick = (e) => {
     setShowLogin('showLogin')
     e.preventDefault()
@@ -30,10 +73,10 @@ export default function Header() {
         <div className='login-module-container'>
           <img src='Images/login-logo.PNG' className='login-module-container-header-img' alt="" ></img>
           <form>
-            <input placeholder='Username' className='login-module-container-input'></input>
-            <input placeholder='Email' className='login-module-container-input'></input>
-            <input placeholder='Password' className='login-module-container-input'></input>
-            <button className='login-module-container-btn'>Login</button>
+            {/* <input required id='login-username' placeholder='Username' className='login-module-container-input' onChange={(e) => { setUsername(e.target.value) }}></input> */}
+            <input required id='login-email' placeholder='Email' className='login-module-container-input' onChange={(e) => { setEmail(e.target.value) }}></input>
+            <input required type="password" id='login-password' placeholder='Password' className='login-module-container-input' onChange={(e) => { setPassword(e.target.value) }}></input>
+            <button className='login-module-container-btn' onClick={checkCredentials}>Login</button>
             <button className='login-module-container-btn-cancel' onClick={handleClickBack}>Cancel</button>
           </form>
         </div>

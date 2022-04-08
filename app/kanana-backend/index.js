@@ -32,7 +32,7 @@ const Abouts = require('./schemas/About')
 
 
 
-app.post('/listingCollectionData', async (req, res) => {
+app.post('/allAboutsData', async (req, res) => {
     Abouts.find({}, (err, data) => {
         if (err) {
             console.log(err)
@@ -83,38 +83,49 @@ app.post('/createAdmin', async (req, res) => {
 
 
 app.post('/adminLogin', (req, res) => {
-    const email = req.body.email
-    const password = req.body.password
+    const data = req.body
+    const email = data.email
+    const password = data.password
     Admin.findOne({ email: email })
         .then(admin => {
-            console.log(admin)
+            console.log('backend data', data)
             if (admin) {
                 bcrypt.compare(password, admin.password, function (err, result) {
                     if (err) {
                         res.send(err)
                     }
                     if (result) {
-                        res.send('Login successful!')
+                        res.send(true)
+                        console.log('data sent')
                     } else {
                         res.send('Password does not match!')
                     }
                 })
             } else {
-                res.send('No account with that email found!')
+                res.send(data)
+
             }
         })
 })
 
+
+
+
+
+
+
+
 app.post('/updateAboutUsText', (req, res) => {
 
-    const text = req.body.text
+    let text = req.body.text
     console.log(req.body)
-    const document = Abouts.find({})
-    const documentText = document.about_text
+    let document = Abouts.find({})
+    let documentText = document.about_text
     Abouts.findOneAndUpdate({ about_text: documentText }, { about_text: text }, { new: true }, (err) => {
         if (err) {
             console.log(err)
         } else {
+            console.log("backend text", text)
             res.send(req.body)
 
         }
@@ -133,18 +144,7 @@ app.get('/getText', async (req, res) => {
         })
 })
 
-// app.get('/getText', async (req, res) => {
-//     const documentPull = mongoose.model(Abouts, aboutsSchema)
-//     documentPull.find({},
-//         (err, data) => {
-//             if (err) {
-//                 console.log(err)
-//             } else {
-//                 res.send(about_text)
-//                 console.log(document.about_text)
-//             }
-//         })
-// })
+
 
 
 //connect to our mongoDB with mongoose and env varaibles
