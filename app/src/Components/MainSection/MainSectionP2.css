@@ -1,5 +1,5 @@
 .main-sectionp2-holder{
-    border:12px solid black;
+    /* border:12px solid black; */
     /* height: 100vh; */
     width: 1920px;
     margin: 0 auto;
@@ -13,7 +13,7 @@
 
 .main-section-span{
     display: flex;
-        border:12px solid white;
+        /* border:12px solid white; */
     flex-direction: column;
     justify-content: center;
     align-items: center;        
@@ -42,7 +42,7 @@
 }
 
 .about-sectionp2-holder{
-    border:12px solid yellow;
+    /* border:12px solid yellow; */
     /* height: 100vh; */
     width: 1700px;
     margin: 0 auto;
@@ -70,7 +70,7 @@
     font-weight: 400;
     font-size: 24px;
     line-height: 36px;
-    border:12px solid red;
+    /* border:12px solid red; */
     padding: 15px;
     /* height:1000px; */
 }
@@ -87,7 +87,7 @@
 
 @media screen and (max-width: 1000px) {
     .main-sectionp2-holder{
-        border:12px solid white;
+        /* border:12px solid red; */
         /* height: 100vh; */
         width: auto;
         margin: 0 auto;
@@ -101,12 +101,12 @@
     
     .main-section-span{
         display: flex;
-            border:12px solid white;
+        width: auto;
+        /* border:12px solid black; */
         flex-direction: column;
         justify-content: center;
         align-items: center;        
         height: 70vh;
-    
     }
     
     #skills-text{
@@ -119,10 +119,10 @@
     }
     
     #improve-text{
-        
         font-size: 36px;
         font-weight: 400;
         line-height: 54px;
+        width: 90%;
         letter-spacing: 0em;
         text-align: center;
         color: #FFFFFF;
@@ -130,15 +130,14 @@
     }
     
     .about-sectionp2-holder{
-        border:12px solid yellow;
-        /* height: 100vh; */
-        width: 1700px;
+        /* border:12px solid red; */
+        height: 100%;
+        width: auto;
         margin: 0 auto;
-        height:1000px;
         background-color: white;
         display: flex;
         flex-direction: column;
-        align-items: flex-start;
+        align-items: center;
         /* padding-top: 80px; */
         /* padding: 0px 100px 0px 100px; */
     }
@@ -158,7 +157,7 @@
         font-weight: 400;
         font-size: 24px;
         line-height: 36px;
-        border:12px solid red;
+        /* border:12px solid red; */
         padding: 15px;
         /* height:1000px; */
     }
