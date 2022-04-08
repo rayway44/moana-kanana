@@ -3,19 +3,18 @@ import React from 'react'
 import TNavBar from '../TNavbar/TNavBar'
 import './MainSectionP2.css'
 import Profile from './Profilepic.png'
-import axios from 'axios';
+import axios from 'axios'
 
 function MainSectionP2() {
 
   const [text, SetText] = useState([])
-
   useEffect(() => {
     axios.get("/gettext")
       .then((res) => {
         SetText(res.data);
       })
   }, []);
-
+  
   return (
     <div>
         <div className='main-sectionp2-container'>

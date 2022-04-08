@@ -20,6 +20,19 @@ function CMSDashboard() {
           })
       }, []);
 
+      const onSubmit = () => {
+          axios.post("/createText", {
+              text: newtext,
+          })
+          .then((response) => {
+            console.log(response.status);
+            console.log("successful");
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      };
+
       const test = text;
 
   return (
@@ -45,7 +58,8 @@ function CMSDashboard() {
                 <div id='about-text'>
                 <ContentEditable
                     html={test}
-                    onBlur={(e)=> SetNewText(e.target.value)}/>
+                    onChange={(e)=> SetNewText(e.target.value)}
+                    onBlur={onSubmit}/>
                 </div>
             </div>   
 
