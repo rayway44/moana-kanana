@@ -67,10 +67,9 @@ app.post('/createAdmin', async (req, res) => {
         if (result === null) {
             const hashedPassword = await bcrypt.hash(req.body.password, 10)
             const admin = new Admin({
-                firstname: req.body.firstname,
-                lastname: req.body.lastname,
+                username: req.body.username,
                 password: hashedPassword,
-                email: req.body.email,
+                email: req.body.email
             })
 
             admin.save().then(() => console.log('Admin Created'))
@@ -102,8 +101,6 @@ app.post('/adminLogin', (req, res) => {
                 })
             } else {
                 res.send('No account with that email found!')
-                console.log(username)
-                console.log(password)
             }
         })
 })
