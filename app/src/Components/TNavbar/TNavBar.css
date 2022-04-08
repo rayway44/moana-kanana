@@ -38,6 +38,15 @@ justify-content: space-between;
     /* border:2px solid yellow; */
 }
 
+.tnav-holder a{
+    color:black;
+    text-decoration:none;
+}
+.tnav-holder a:hover{
+    /* color:black; */
+    border-bottom: 2px solid black;
+}
+
 .tnav-icon{
     padding-right:120px
 }
