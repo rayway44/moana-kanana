@@ -1,7 +1,6 @@
 import React from 'react'
 import TNavBar from '../TNavbar/TNavBar'
 import './MainSectionP2.css'
-import Banner from './Banner.png'
 import Profile from './Profilepic.png'
 
 function MainSectionP2() {
