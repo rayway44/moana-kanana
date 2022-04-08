@@ -1,9 +1,10 @@
-   
-import React from 'react'
+
 import Logo from './Logo.png'
 import './TNavBar.css'
 
 export default function TNavBar() {
+
+
   return (
     <div className="tnav-holder">
       <div className="tnav">

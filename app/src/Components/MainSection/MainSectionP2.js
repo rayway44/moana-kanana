@@ -1,9 +1,21 @@
+import axios from 'axios'
+import {useEffect, useState} from 'react'
 import React from 'react'
 import TNavBar from '../TNavbar/TNavBar'
 import './MainSectionP2.css'
 import Profile from './Profilepic.png'
 
 function MainSectionP2() {
+
+  const [text, SetText] = useState([])
+
+  useEffect(() => {
+    axios.get("/gettext")
+      .then((res) => {
+        SetText(res.data);
+      })
+  }, []);
+
   return (
     <div>
         <div className='main-sectionp2-container'>
@@ -25,7 +37,7 @@ function MainSectionP2() {
                 <div id='about-img'><img src={Profile} alt='' />
 
                 </div>
-                <div id='about-text'>
+                <div id='about-text' dangerouslySetInnerHTML={{ __html: (text.abouttext)}}>
                 The name Kanana is the Samoan word for Canaan, the country where the Israelite longed to move and live as free people. Those dreams, hopes and aspirations of the Israelite are similar to the ones our Pacific peoples have here in Aotearoa, who moved looking to build a new future for their families.
                 <br/>
                 <br/>
