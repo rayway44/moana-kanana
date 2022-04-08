@@ -75,7 +75,7 @@
 
 @media screen and (max-width: 1000px) {
     .section-one{
-        border:12px solid black;
+        /* border:12px solid black; */
         margin: 0 auto;
         width: auto;
         background-repeat: no-repeat;
