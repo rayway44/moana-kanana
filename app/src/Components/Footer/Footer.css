@@ -1,7 +1,4 @@
-body {
-  overflow-x: hidden; /* Hide horizontal scrollbar */
-  display: flex;
-}
+
 
 .footer-body-container {
   height: 60vh;
@@ -121,3 +118,128 @@ body {
 }
 
 /* right page content ends */
+
+/* ======== MEDIA QUERIES ========*/
+/* ======== MEDIA QUERIES ========*/
+/* ======== MEDIA QUERIES ========*/
+/* ======== MEDIA QUERIES ========*/
+
+@media only screen and (max-width: 1000px) {
+
+
+  
+  .footer-container {
+    /* border: 13px solid black; */
+    /* height: 943px; */
+    width: 100%;
+    background-image: url("./orange-pacific-pattern.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    background-blend-mode: color-burn;
+  }
+  /* page is divided into two sections, left and right */
+  
+  /* left page content starts */
+  .footer-container-left-content {
+    /* border: 13px solid yellow; */
+    height: 100%;
+    width: 37%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-self: center;
+    margin-right: 10px;
+  }
+  
+  .footer-container-left-content-title-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  
+  .footer-container-left-content-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #ffffff;
+    border-radius: 10px;
+    color: #ffffff;
+    font: Glegoo;
+    font-weight: 700;
+    font-size: 40px;
+    height: 105px;
+    width: 379px;
+  }
+  
+  .footer-container-left-content-text-1 {
+    font-weight: 400;
+    color: #ffffff;
+    text-align: left;
+    font-size: 20px;
+    width: 100%;
+    padding:20px 0px 20px 0px;
+  }
+  
+  .footer-container-left-content-text-2 {
+    font-weight: 400;
+    color: #ffffff;
+    text-align: left;
+    font-size: 20px;
+    width: 100%;
+  }
+  /* left page content ends */
+  /* right page content starts */
+  
+  .footer-container-right-content {
+    height: 60%;
+    width: 37%;
+    display: flex;
+    flex-direction: column;
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+  }
+  
+  .footer-container-right-content-form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .footer-container-right-content-form-input {
+    margin: 4px;
+    color: lightgray;
+    font-size: 22px;
+    border: none;
+    border-radius: 5px;
+    padding-left: 12px;
+    height: 55px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  }
+  
+  .footer-container-right-content-form-text-area {
+    margin: 4px;
+    resize: none;
+    padding-left: 12px;
+    font-size: 22px;
+    border-radius: 5px;
+    border: none;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  }
+  
+  .footer-container-right-content-form-submit-btn {
+    height: 55px;
+    border-radius: 5px;
+    border: none;
+    margin: 4px;
+    background-color: #f9b24c;
+    color: #ffffff;
+    font-size: 20px;
+    font-weight: 700;
+  }
+
+}
