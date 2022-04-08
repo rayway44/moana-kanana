@@ -108,9 +108,10 @@ app.post('/adminLogin', (req, res) => {
 app.post('/updateAboutUsText', (req, res) => {
 
     const text = req.body.text
-    const id = req.body.id
     console.log(req.body)
-    Abouts.findOneAndUpdate({ about_id: `${id}` }, { about_id: `${id}`, about_text: text }, { new: true }, (err) => {
+    const document = Abouts.find({})
+    const documentText = document.about_text
+    Abouts.findOneAndUpdate({ about_text: documentText }, { about_text: text }, { new: true }, (err) => {
         if (err) {
             console.log(err)
         } else {
@@ -119,6 +120,31 @@ app.post('/updateAboutUsText', (req, res) => {
         }
     })
 })
+
+app.get('/getText', async (req, res) => {
+    Abouts.find({},
+        (err, data) => {
+            if (err) {
+                console.log(err)
+            } else {
+                res.send(data[0].about_text)
+                console.log(data[0].about_text)
+            }
+        })
+})
+
+// app.get('/getText', async (req, res) => {
+//     const documentPull = mongoose.model(Abouts, aboutsSchema)
+//     documentPull.find({},
+//         (err, data) => {
+//             if (err) {
+//                 console.log(err)
+//             } else {
+//                 res.send(about_text)
+//                 console.log(document.about_text)
+//             }
+//         })
+// })
 
 
 //connect to our mongoDB with mongoose and env varaibles

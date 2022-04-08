@@ -1,4 +1,4 @@
-import {useEffect, useState} from 'react'
+import { useEffect, useState } from 'react'
 import React from 'react'
 import TNavBar from '../TNavbar/TNavBar'
 import './MainSectionP2.css'
@@ -9,38 +9,39 @@ function MainSectionP2() {
 
   const [text, SetText] = useState([])
   useEffect(() => {
-    axios.get("/gettext")
+    axios.get("http://localhost:8081/getText")
       .then((res) => {
         SetText(res.data);
+        console.log(`data: ${res.data}`)
       })
-  }, []);
-  
+  }, [text]);
+
   return (
     <div>
-        <div className='main-sectionp2-container'>
-            <div className='main-sectionp2-holder'>
-               <TNavBar /> 
-                <div className='main-section-span'>
-                <div id='skills-text'>
-                DELIVER SKILLS WORKSHOP TO PACIFIC PEOPLE
-                </div>
-                <br/>
-                <div id='improve-text'>
-                Improve well-being, job prospects and quality of life 
-                </div>
-                
-                </div> 
+      <div className='main-sectionp2-container'>
+        <div className='main-sectionp2-holder'>
+          <TNavBar />
+          <div className='main-section-span'>
+            <div id='skills-text'>
+              DELIVER SKILLS WORKSHOP TO PACIFIC PEOPLE
             </div>
-            <div className='about-sectionp2-holder'>
-                <div id='about-sectionp2-title'>About Us</div>
-                <div id='about-img'><img src={Profile} alt='' />
+            <br />
+            <div id='improve-text'>
+              Improve well-being, job prospects and quality of life
+            </div>
 
-                </div>
-                <div id='about-text' dangerouslySetInnerHTML={{ __html: (text.abouttext)}}>
-                </div>
-            </div>   
-
+          </div>
         </div>
+        <div className='about-sectionp2-holder'>
+          <div id='about-sectionp2-title'>About Us</div>
+          <div id='about-img'><img src={Profile} alt='' />
+
+          </div>
+          <div id='about-text' dangerouslySetInnerHTML={{ __html: (text) }}>
+          </div>
+        </div>
+
+      </div>
     </div>
   )
 }
