@@ -18,7 +18,7 @@ export default function NavBar() {
         </div>
 
         <div className="nav-right">
-          <div className="nav-icon"><a href=' '>Home</a></div>
+          <div className="nav-icon"><Link to='/'>Home</Link></div>
           
           <div className="nav-icon"><Link to='/about'>About</Link></div>
           

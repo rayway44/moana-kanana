@@ -2,14 +2,18 @@
 
 .tnav-holder{
 background-color: rgba(255, 249, 249, 0.71);
+/* border:12px solid red; */
+display: flex;
+justify-content: space-between;
 }
 
 .tnav{
-    width: 100vw;
+    width: 1550px; 
     margin: 0 auto;
     font-size: 20px;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    /* border:2px solid black; */
 }
 
 .tnav-left{
@@ -31,8 +35,79 @@ background-color: rgba(255, 249, 249, 0.71);
     display: flex;
     font-size:26px;
     align-items: center;
+    /* border:2px solid yellow; */
+}
+
+.tnav-holder a{
+    color:black;
+    text-decoration:none;
+}
+.tnav-holder a:hover{
+    /* color:black; */
+    border-bottom: 2px solid black;
 }
 
 .tnav-icon{
     padding-right:120px
+}
+
+/* ======== MEDIA QUERIES ========*/
+/* ======== MEDIA QUERIES ========*/
+/* ======== MEDIA QUERIES ========*/
+/* ======== MEDIA QUERIES ========*/
+/* ======== MEDIA QUERIES ========*/
+
+@media screen and (max-width: 1000px) {
+    .tnav-holder{
+        background-color: rgba(255, 249, 249, 0.71);
+        /* border:12px solid red; */
+        display: flex;
+        width: auto;
+        /* justify-content: space-between; */
+        }
+        
+        .tnav{
+            /* width: auto; */
+            /* margin: 0 auto; */
+            font-size: 20px;
+            display: flex;
+            flex-direction:column;
+            /* justify-content: center; */
+            align-items: center;
+            /* border:12px solid black; */
+        }
+        
+        .tnav-left{
+            /* display: flex;
+            justify-content: flex-start; */
+            /* align-items: center; */
+            font-size:20px;
+            /* border:12px solid red; */
+        }
+        
+        .tleft-title{
+            font-family: 'Montserrat Subrayada', sans-serif;
+            font-size: 45px;
+        }
+        
+        .tnav-left img{
+            padding-left:0px;
+        }
+        
+        .tnav-right{
+            font-size:26px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            /* border:12px solid yellow; */
+        }
+        
+        .tnav-icon{
+            padding:10px 0px 10px 0px;
+
+            text-align: center;
+            /* border:12px solid black; */
+        }
 }
