@@ -9,16 +9,16 @@ function MainSectionP2() {
 
   // const [input, setInput] = useState('')
   // const [output, setOutput] = useState('')
-  const [current, setCurrent] = useState('set current')
+  // const [current, setCurrent] = useState('set current')
   
-  useEffect(()=>{
-    axios.get(`http://localhost:5000/`)
-    .then(res => {
-      const response = res
-      console.log(response.data.contents)
-      setCurrent(`${response.data.contents}`)
-    })
-  },[])
+  // useEffect(()=>{
+  //   axios.get(`http://localhost:5000/`)
+  //   .then(res => {
+  //     const response = res
+  //     console.log(response.data.contents)
+  //     setCurrent(`${response.data.contents}`)
+  //   })
+  // },[])
 
   return (
     <div>

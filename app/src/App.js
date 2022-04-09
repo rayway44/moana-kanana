@@ -13,13 +13,13 @@ import {
 
 function App() {
 
-  const [isLoggedIn, setisLoggedIn] = useState(null);
-  const logIn = () => {
-    setisLoggedIn(true);
-  };
-  const logOut = () => {
-    setisLoggedIn(false);
-  };
+  // const [isLoggedIn, setisLoggedIn] = useState(null);
+  // const logIn = () => {
+  //   setisLoggedIn(true);
+  // };
+  // const logOut = () => {
+  //   setisLoggedIn(false);
+  // };
 
   return (
     <div className="App">

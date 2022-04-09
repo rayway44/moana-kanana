@@ -1,12 +1,12 @@
 import axios from 'axios';
 import React from 'react'
-import { useState, useEffect } from 'react';
+import { useState} from 'react';
 import './css/Header.css'
 
 export default function Header() {
   const [showLogin, setShowLogin] = useState('noLogin')
 
-  const [username, setUsername] = useState('')
+  // const [username, setUsername] = useState('')
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
 
@@ -65,7 +65,7 @@ export default function Header() {
           <img src='Images/vector02.png' alt="" /><a href=' '>021 572 353</a>
         </div>
         <div >
-          <a className='login-icon' href=""><img src='Images/login-icon.png' alt="" onClick={handleClick} /></a>
+          <a className='login-icon' href=" "><img src='Images/login-icon.png' alt="" onClick={handleClick} /></a>
         </div>
       </div>
       {showLogin === 'noLogin' && <div></div>}

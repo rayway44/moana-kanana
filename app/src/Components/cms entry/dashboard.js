@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import TNavBar from '../TNavbar/TNavBar';
 import '../MainSection/MainSectionP2.css';
-import Profile from '../MainSection/MainSectionP2';
-import ContentEditable from 'react-contenteditable';
-import { useState, useRef } from 'react';
+// import Profile from '../MainSection/MainSectionP2';
+// import ContentEditable from 'react-contenteditable';
+import { useState } from 'react';
 import axios from 'axios';
 
 
