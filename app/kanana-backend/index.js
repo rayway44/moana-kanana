@@ -31,7 +31,6 @@ const Abouts = require('./schemas/About')
 
 
 
-
 app.post('/listingCollectionData', async (req, res) => {
     Abouts.find({}, (err, data) => {
         if (err) {
@@ -42,8 +41,14 @@ app.post('/listingCollectionData', async (req, res) => {
     })
 })
 
-
-
+app.get('/find', (req, res) => {
+    // res.send('hit find')
+    
+    Admin.findOne({})
+    .then(res => {
+        res.send('promise hit')
+    })
+})
 
 app.post('/createText', async (req, res) => {
 
@@ -113,7 +118,7 @@ app.post('/updateAboutUsText', (req, res) => {
     const text = req.body.text
     const id = req.body.id
     console.log(req.body)
-    Abouts.findOneAndUpdate({ about_id: `${id}` }, { about_id: `${id}`, about_text: text }, { new: true }, (err) => {
+    Abouts.updateOne({ about_id: `${id}` }, { about_id: `${id}`, about_text: text }, { new: true }, (err) => {
         if (err) {
             console.log(err)
         } else {
