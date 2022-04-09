@@ -112,6 +112,9 @@ function CMSDashboard() {
               SUBMIT
             </div>
             <div className="change-text">
+            <span className='default-text'>Default text:</span> Kanana Ltd. is a mentoring company offering adult training and project management services to the Paciific (Pasifika) communities in order to help them achieve a better life quality. Kanana’s two milestones are Project Ikuna, offering training for Pacific employers; and Project No Place Like Home, aimed at home ownership.
+            </div>
+            <div className="change-text">
             {outputOne}
             </div>
           </div>
@@ -127,6 +130,9 @@ function CMSDashboard() {
               SUBMIT
             </div>
             <div className="change-text">
+            <span className='default-text'>Default text:</span> A four-step programme that will help, educate, assist and support families throughout the home ownership process. The programme includes financial skills learning; budget management; home loan application and other financing options to purchase a home; and post purchase assistance and mentoring, including advice about financial obligations, house maintenance and more.
+            </div>
+            <div className="change-text">
             {outputTwo}
             </div>
           </div>
@@ -140,6 +146,9 @@ function CMSDashboard() {
             </div>
             <div onClick={pullThree} className='dashboard-submit-button'>
               SUBMIT
+            </div>
+            <div className="change-text">
+            <span className='default-text'>Default text:</span> Designed to support Pacific workers in low-skilled jobs, this programme aims at giving them useful tools and strategies to improve their abilities and move toward higher level jobs. They will learn about financial management including budgeting and goal setting; and digital skills. As a result, employers will have increased productivity and a future-ready, skilled, engaged, motivated and effective staff.
             </div>
             <div className="change-text">
             {outputThree}

@@ -17,6 +17,11 @@
 height: 2400px;
 }
 
+.default-text{
+    font-weight: bold;
+    font-size: 28px;
+}
+
 .main-section-span{
     display: flex;
         /* border:12px solid red; */
