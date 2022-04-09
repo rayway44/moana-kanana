@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react'
+// import { useEffect, useState } from 'react'
 import React from 'react'
 import TNavBar from '../TNavbar/TNavBar'
 import './MainSectionP2.css'
 import Profile from './Profilepic.png'
-import axios from 'axios'
+// import axios from 'axios'
 
 function MainSectionP2() {
 
