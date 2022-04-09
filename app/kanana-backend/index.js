@@ -32,7 +32,7 @@ const Abouts = require('./schemas/About')
 
 
 
-app.post('/allAboutsData', async (req, res) => {
+app.post('/listingCollectionData', async (req, res) => {
     Abouts.find({}, (err, data) => {
         if (err) {
             console.log(err)
@@ -67,9 +67,10 @@ app.post('/createAdmin', async (req, res) => {
         if (result === null) {
             const hashedPassword = await bcrypt.hash(req.body.password, 10)
             const admin = new Admin({
-                username: req.body.username,
+                firstname: req.body.firstname,
+                lastname: req.body.lastname,
                 password: hashedPassword,
-                email: req.body.email
+                email: req.body.email,
             })
 
             admin.save().then(() => console.log('Admin Created'))
@@ -83,68 +84,44 @@ app.post('/createAdmin', async (req, res) => {
 
 
 app.post('/adminLogin', (req, res) => {
-    const data = req.body
-    const email = data.email
-    const password = data.password
+    const email = req.body.email
+    const password = req.body.password
     Admin.findOne({ email: email })
         .then(admin => {
-            console.log('backend data', data)
+            console.log(admin)
             if (admin) {
                 bcrypt.compare(password, admin.password, function (err, result) {
                     if (err) {
                         res.send(err)
                     }
                     if (result) {
-                        res.send(true)
-                        console.log('data sent')
+                        res.send('Login successful!')
                     } else {
                         res.send('Password does not match!')
                     }
                 })
             } else {
-                res.send(data)
-
+                res.send('No account with that email found!')
+                console.log(username)
+                console.log(password)
             }
         })
 })
 
-
-
-
-
-
-
-
 app.post('/updateAboutUsText', (req, res) => {
 
-    let text = req.body.text
+    const text = req.body.text
+    const id = req.body.id
     console.log(req.body)
-    let document = Abouts.find({})
-    let documentText = document.about_text
-    Abouts.findOneAndUpdate({ about_text: documentText }, { about_text: text }, { new: true }, (err) => {
+    Abouts.findOneAndUpdate({ about_id: `${id}` }, { about_id: `${id}`, about_text: text }, { new: true }, (err) => {
         if (err) {
             console.log(err)
         } else {
-            console.log("backend text", text)
             res.send(req.body)
 
         }
     })
 })
-
-app.get('/getText', async (req, res) => {
-    Abouts.find({},
-        (err, data) => {
-            if (err) {
-                console.log(err)
-            } else {
-                res.send(data[0].about_text)
-                console.log(data[0].about_text)
-            }
-        })
-})
-
-
 
 
 //connect to our mongoDB with mongoose and env varaibles
