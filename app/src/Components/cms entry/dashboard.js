@@ -10,13 +10,8 @@ import axios from 'axios';
 
 function CMSDashboard() {
 
-<<<<<<< HEAD
-  const [text, SetText] = useState("");
-  const [newtext, SetNewText] = useState("");
-=======
   const [text, SetText] = useState([]);
   const [newtext, SetNewText] = useState('');
->>>>>>> Gray
 
   useEffect(() => {
     axios.get('http://localhost:8081/getText')
@@ -26,16 +21,12 @@ function CMSDashboard() {
       })
   }, []);
 
-<<<<<<< HEAD
-  const handleBlur = () => {
-=======
   const onSubmit = () => {
     let currentText = document.getElementById('about-text')
     let newText = currentText.textContent
 
 
 
->>>>>>> Gray
     axios.post("http://localhost:8081/updateAboutUsText", {
       text: newText,
     })
@@ -48,14 +39,9 @@ function CMSDashboard() {
         console.log(err);
       });
   };
-<<<<<<< HEAD
-
-
-=======
   let defaultText = text
   // const test = text;
   // console.log(text)
->>>>>>> Gray
   return (
     <div>
       <div className='main-sectionp2-container'>
@@ -63,7 +49,7 @@ function CMSDashboard() {
           <TNavBar />
           <div className='main-section-span'>
             <div id='skills-text' >
-
+            DELIVER SKILLS WORKSHOP TO PACIFIC PEOPLE
             </div>
             <br />
             <div id='improve-text'>
@@ -79,12 +65,8 @@ function CMSDashboard() {
 
             <ContentEditable
               html={text}
-<<<<<<< HEAD
-              onBlur={(e) => SetNewText(e.target.value)} 
-=======
             // onChange={(e) => SetNewText(e.target.value)}
             // onBlur={onSubmit}
->>>>>>> Gray
             />
           </div>
         </div>
