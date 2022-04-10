@@ -1,6 +1,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
-const cors = require('cors')   
+const cors = require('cors')
+const dotenv = require('dotenv').config();
 
 const app = express()
 const port = 5000
@@ -8,9 +9,9 @@ const port = 5000
 app.use(express.json());
 app.use(cors())
 
-const user = 'admin-ray'
-const password = 'raystu123'
-const database02 = 'moana-cms'
+const user = process.env.MOANA_DB_USER
+const password = process.env.MOANA_DB_PASSWORD
+const database02 = process.env.MOANA_DB_DATABASE
 
 const uriRay = `mongodb+srv://${user}:${password}@cluster0.rw4si.mongodb.net/${database02}?retryWrites=true&w=majority`
 
@@ -25,7 +26,7 @@ const uriRay = `mongodb+srv://${user}:${password}@cluster0.rw4si.mongodb.net/${d
             console.log('you are connected MONGO server')
         })
 
-        // Creating the schema
+        // Creating the SCHEMA
         const moanaCms = new mongoose.Schema({
             editor:{
                 type: String,
@@ -37,30 +38,9 @@ const uriRay = `mongodb+srv://${user}:${password}@cluster0.rw4si.mongodb.net/${d
             }
 
         })
-
-const moana = mongoose.model('moanacms', moanaCms)
-
-
-// UPDATING from FRONT to BACKEND
-// UPDATING from FRONT to BACKEND
-// UPDATING from FRONT to BACKEND
-// UPDATING from FRONT to BACKEND
-app.get('/test/:content', async (req,res) => {
-    
-        const id = '62515fdaf9477e1167b035c1'
-        const message = req.params.content
-    
-        try{
-            await moana.findById(id, (err, newContents) => {
-                newContents.contents = message;
-                newContents.save();
-                res.send(`your new message is: ${message}`)
-            })
-        } catch(e){
-            console.log(e)
-        }
-
-})
+        
+        // Creating a MOANA MODEL if one is not there
+        const moana = mongoose.model('moanacms', moanaCms)
 
 // READING WHO WE ARE contents
 // READING WHO WE ARE contents
@@ -95,7 +75,9 @@ app.get('/updateOne/:contentOne', async (req,res) => {
         }
 })
 
+// =====================
 
+// READING COMMUNITY PROJECT - BRIEF CONTENT ONE
 // READING COMMUNITY PROJECT - BRIEF CONTENT ONE
 app.get('/pullTwo', async (req,res) => {
 
@@ -129,9 +111,10 @@ app.get('/updateTwo/:contentTwo', async (req,res) => {
         }
 })
 
-// ===========
+// =====================
 
-// READING COMMUNITY PROJECT - BRIEF CONTENT ONE
+// READING COMMUNITY BRIEF TWO
+// READING COMMUNITY BRIEF TWO
 app.get('/pullThree', async (req,res) => {
 
     const id = '62518d5842524e78df57c526'
@@ -164,6 +147,10 @@ app.get('/updateThree/:contentThree', async (req,res) => {
         }
 })
 
+// =====================
+
+// GRAB ALL DOCUMENTS ENDPOINT
+// GRAB ALL DOCUMENTS ENDPOINT
 app.get('/',(req,res) => {
 
     // moana.findById({_id:'62515fdaf9477e1167b035c1'})
@@ -178,9 +165,10 @@ app.get('/',(req,res) => {
 
 })
 
-// Pushing in new DATA to DOCUMENT
-// Pushing in new DATA to DOCUMENT
-// Pushing in new DATA to DOCUMENT
+// =====================
+
+// Pushing in new DATA to MOANA-CMS
+// Pushing in new DATA to MOANA-CMS
 app.get('/push', async (req,res) => {
 
     const newPost = 
@@ -195,39 +183,8 @@ app.get('/push', async (req,res) => {
 
 })
 
-app.get('/find',(req,res) => {
-
-    moana.find({editor: 'test'}).updateOne( {$set: {editor: 'test'}})
-    .then((result) => {
-        // console.log('hitting ray')
-        res.send(result)
-    })
-    .catch(err => { 
-        console.log(err)
-    })
-})
-
-
-// making an UPDATE =========
-// making an UPDATE =========
-// making an UPDATE =========
-app.get('/update', async (req,res) => {
-
-    const id = '62515fdaf9477e1167b035c1'
-    const message = 'chanegd by ray and working'
-
-    try{
-        await moana.findById(id, (err, newContents) => {
-            newContents.contents = message;
-            newContents.save();
-            res.send('POST UPDATED')
-        })
-    } catch(e){
-        console.log(e)
-    }
-
-})
-
+// LISTENING TO PORT
+// LISTENING TO PORT
 app.listen(port, function (err) {
     if (err) console.log("Error in server setup")
     console.log(`Server listening on Port ${port}`);
